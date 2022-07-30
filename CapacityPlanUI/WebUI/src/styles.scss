@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+.content-wrapper{
+    padding: 20px;
+  }
+
+// ngb pagination style
+.visually-hidden{
+  display: none;
+}
+
+.pagination-select{
+  outline: none;
+  border: 1px solid #dee2e6;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding-left: 0.75rem;
+}
+
+ul.pagination li.page-item:last-child a{
+  border-radius: 0 !important;
+  border-right: 0;
+}

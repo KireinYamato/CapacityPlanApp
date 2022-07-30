@@ -1,0 +1,42 @@
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand-md navbar-dark navbar-light">
+    <div class="container">
+        <a href="../../index3.html" class="navbar-brand">
+            <img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light"> Capacity Planning</span>
+        </a>
+        <span class="text-white text-lg"> &nbsp; | </span> 
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item" *ngIf="router.url !== '/home/capacity-plans'">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a routerLink="/home/capacity-plans" routerLinkActive="active" class="nav-link"><i class="nav-icon fas fa-home"></i> Capacity Plans</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Simulations</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Hiring Demands</a>
+            </li>
+            <!-- <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Contact</a>
+            </li> -->
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+            </a>
+        </li>
+        </ul>
+    </div>
+</nav>
+<!-- /.navbar -->

@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Capacity ID</th>
+      <th scope="col">Capacity Name</th>
+      <th scope="col">Project</th>
+      <th scope="col">Work Stream</th>
+      <th scope="col">Channel</th>
+      <th scope="col">Billing Model</th>  
+      <th scope="col">Geography</th>      
+      <th scope="col">Country</th>
+      <th scope="col">City</th>
+      <th scope="col">Delivery Leads</th>            
+      <th scope="col">WCC leads</th>    
+      <th scope="col">POC Leads</th>
+      <th scope="col">Status</th>    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let capacityPlan of capacityPlans">
+      <th scope="row">{{ capacityPlan.capacityPlanDetails.capacityPlanRefId }}</th>
+      <td>{{ capacityPlan.capacityPlanDetails.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.project.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.workstream.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.channel.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.billingModel.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.locationDetails.geography.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.locationDetails.country.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.locationDetails.city.name }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.peopleDetails.deliveryLead.firstName }} {{ capacityPlan.capacityPlanDetails.peopleDetails.deliveryLead.lastName }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.peopleDetails.wccLead.firstName }} {{ capacityPlan.capacityPlanDetails.peopleDetails.wccLead.lastName }}</td>
+      <td>{{ capacityPlan.capacityPlanDetails.peopleDetails.pocLead.firstName }} {{ capacityPlan.capacityPlanDetails.peopleDetails.pocLead.lastName }}</td>
+      <td>
+        <span class="badge badge-success" *ngIf="capacityPlan.status == 0">Live</span>
+        <span class="badge badge-info" *ngIf="capacityPlan.status == 1">Draft</span>
+        <span class="badge badge-warning" *ngIf="capacityPlan.status == 2">Deactivated</span>
+        <span class="badge badge-danger" *ngIf="capacityPlan.status == 3">Delted</span>
+      </td>    
+    </tr>
+    </tbody>
+  </table>
+  
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-end mt-3">
+
+        <ul class="pagination p-0 float-right">
+          <ngb-pagination class="p-r-5 pagination" [collectionSize]="totalRecords" [rotate]="true"
+            [maxSize]="10" (pageChange)="changePage($event)" [pageSize]="pageSize" [(page)]="currentPage"
+            [boundaryLinks]="true">
+          </ngb-pagination>
+          <select class="form-select pagination-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="changePageSize($event)">
+            <option [selected]="x.count === pageSize" [value]="x.count" *ngFor="let x of paginationSize">
+              {{ x.text }}
+            </option>
+          </select>
+        </ul>
+
+    </div>
+  </div>
+</div>
