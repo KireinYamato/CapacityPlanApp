@@ -5,6 +5,8 @@ import { CapacityPlanResponse } from '../../models/response/capacity-plan/capaci
 import { HttpBaseService } from '../auth/http-base/http-base.service';
 import { catchError } from 'rxjs';
 import { CapacityPlanQueryParameters } from '../../models/request/capacity-plan/capacity-plan-query-params.model';
+import { CapacityPlanCreate } from '../../models/request/capacity-plan/capacity-plan-create.model';
+import { CapacityPlanUpdate } from '../../models/request/capacity-plan/capacity-plan-update.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,4 +28,23 @@ export class CapacityPlanService extends HttpBaseService{
     }).pipe(catchError(this.handleError));
   }
 
+  getCapacityPlanById(id: any){
+    const url = `${this.baseURL}/CapacityPlan/${id}`;
+    return this.http.get<any>(url)
+    .pipe(catchError(this.handleError));
+  }
+
+  addCapacityPlan(CapacityPlanCreate: CapacityPlanCreate){
+    const url = `${this.baseURL}/CapacityPlan`;
+
+    return this.http.post<any>(url, CapacityPlanCreate)
+      .pipe(catchError(this.handleError));
+  }
+
+  editCapacityPlan(CapacityPlanUpdate: CapacityPlanUpdate, id){
+    const url = `${this.baseURL}/CapacityPlan/${id}`;
+
+    return this.http.put<any>(url, CapacityPlanUpdate)
+      .pipe(catchError(this.handleError));
+  }
 }

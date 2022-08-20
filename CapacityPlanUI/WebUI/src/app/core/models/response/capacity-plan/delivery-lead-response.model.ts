@@ -1,4 +1,4 @@
-export class DeliveryLeadResponse{
+export class DeliveryLeadResponse {
     firstName: string;
     middleName: string;
     lastName: string;

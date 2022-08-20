@@ -6,4 +6,10 @@ export class PeopleDetailsResponse{
     deliveryLead: DeliveryLeadResponse;
     wccLead: WccLeadResponse;
     pocLead: PocLeadResponse;
+    
+    constructor(){
+        this.deliveryLead = new DeliveryLeadResponse();
+        this.wccLead = new WccLeadResponse();
+        this.pocLead = new PocLeadResponse();
+    }
 }

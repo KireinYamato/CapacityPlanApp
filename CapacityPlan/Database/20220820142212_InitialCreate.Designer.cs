@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace CapacityPlanApp.Database.Migrations
+namespace CapacityPlanApp.Database
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220730124322_InitialCreate")]
+    [Migration("20220820142212_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

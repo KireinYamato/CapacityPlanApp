@@ -7,13 +7,14 @@ import { ProjectResponse } from "./project-response.model";
 import { WorkstreamResponse } from "./workstream-response.model";
 
 export class CapacityPlanDetailsResponse {
+    id: number; 
     name: string;
     capacityPlanRefId: number;
     dateFrom: string;
     dateTo: string;
     project: ProjectResponse;
     workstream: WorkstreamResponse;
-    languageCreate: LanguageResponse;
+    language: LanguageResponse;
     channel: ChannelResponse;
     billingModel: BillingModelResponse;
     locationDetails: LocationDetailsResponse;

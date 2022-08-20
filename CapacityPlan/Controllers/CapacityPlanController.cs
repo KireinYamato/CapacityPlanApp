@@ -25,6 +25,11 @@ namespace CapacityPlanApp.Controllers
             _capacityPlanService = capacityPlanService;
         }
         
+        /// <summary>
+        /// Gets all capacity plans
+        /// </summary>
+        /// <param name="capacityPlanQueryParameters"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetCapacityPlans([FromQuery] CapacityPlanQueryParameters capacityPlanQueryParameters)
         {

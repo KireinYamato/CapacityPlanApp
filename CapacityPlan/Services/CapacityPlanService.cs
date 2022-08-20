@@ -70,8 +70,7 @@ namespace CapacityPlanApp.Services
         }
 
         public async Task<ApiResponse> CreateCapacityPlan(CapacityPlanCreate capacityPlanCreate)
-        {
-            
+        {            
             var capacityPlan = _mapper.Map<CapacityPlan>(capacityPlanCreate);
 
             _capacityPlanRepository.CreateCapacityPlan(capacityPlan);
@@ -79,7 +78,7 @@ namespace CapacityPlanApp.Services
             // update the database
             await _repositoryContext.SaveChangesAsync();
 
-            return new ApiResponse(capacityPlanCreate, HttpStatusCode.OK);
+            return new ApiResponse("success", HttpStatusCode.OK);
         }
 
         public async Task<ApiResponse> UpdateCapacityPlan(CapacityPlanIdDetails capacityPlanIdDetails, CapacityPlanUpdate capacityPlanUpdate)
@@ -93,7 +92,6 @@ namespace CapacityPlanApp.Services
             var capacityPlan = _mapper.Map(capacityPlanUpdate, capacityPlanRequest);
 
             _capacityPlanRepository.UpdateCapacityPlan(capacityPlan);
-
 
             // update the database
             await _repositoryContext.SaveChangesAsync();

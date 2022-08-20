@@ -21,3 +21,11 @@ ul.pagination li.page-item:last-child a{
   border-radius: 0 !important;
   border-right: 0;
 }
+
+.pointer{
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  z-index: 0 !important;
+}

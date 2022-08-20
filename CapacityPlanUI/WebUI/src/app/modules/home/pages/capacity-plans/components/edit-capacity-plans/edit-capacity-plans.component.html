@@ -1,1 +1,101 @@
-<p>edit-capacity-plans works!</p>
+<ngx-spinner [name]="spinner" bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-running-dots" [fullScreen] = "false"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update Capacity Plan</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="capacityPlanForm">
+    <div class="mb-3">
+        <div class="form-group">
+            <label for="capacityPlanId">Capacity ID <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="capacityPlanId" id="capacityPlanId" placeholder="Capacity ID">
+        </div>
+        <div class="form-group">
+            <label for="capacityPlanName">Capacity Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="capacityPlanName" id="capacityPlanName" placeholder="Capacity Name">
+        </div>
+        <div class="form-group">
+            <label for="projectName">Project Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="projectName" id="projectName" placeholder="Project Name">
+        </div>
+        <div class="form-group">
+            <label for="workStream">Work Stream<code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="workStream" id="workStream" placeholder="Work Stream">
+        </div>        
+        <div class="form-group">
+            <label for="language">Language <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="language" id="language" placeholder="Language">
+        </div>
+        <div class="form-group">
+            <label for="channel">Channel <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="channel" id="channel" placeholder="Channel">
+        </div>
+        <div class="form-group">
+            <label for="billingModel">Billing Model <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="billingModel" id="billingModel" placeholder="Billing Model">
+        </div>
+        <div class="form-group">
+            <label for="geography">Geography <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="geography" id="geography" placeholder="Geography">
+        </div>         
+        <div class="form-group">
+            <label for="country">Country <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="country" id="country" placeholder="Country">
+        </div>
+        <div class="form-group">
+            <label for="city">City <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="city" id="city" placeholder="City">
+        </div>
+        <div class="form-group">
+            <label for="deliveryLeadFirstName">Delivery Lead First Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="deliveryLeadFirstName" id="deliveryLeadFirstName" placeholder="Delivery Lead First Name">
+        </div>
+        <div class="form-group">
+            <label for="deliveryLeadMiddleName">Delivery Lead Middle Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="deliveryLeadMiddleName" id="deliveryLeadMiddleName" placeholder="Delivery Lead Middle Name">
+        </div>        
+        <div class="form-group">
+            <label for="deliveryLeadLastName">Delivery Lead Last Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="deliveryLeadLastName" id="deliveryLeadLastName" placeholder="Delivery Last Name">
+        </div>
+        <div class="form-group">
+            <label for="wccLeadFirstName">WCC Lead First Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="wccLeadFirstName" id="wccLeadFirstName" placeholder="WCC Lead First Name">
+        </div>
+        <div class="form-group">
+            <label for="wccLeadMiddleName">WCC Lead Middle Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="wccLeadMiddleName" id="wccLeadMiddleName" placeholder="WCC Lead Middle Name">
+        </div>        
+        <div class="form-group">
+            <label for="wccLeadLastName">WCC Lead Last Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="wccLeadLastName" id="wccLeadLastName" placeholder="WCC Lead Last Name">
+        </div>
+        <div class="form-group">
+            <label for="pocLeadFirstName">POC Lead First Name <code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="pocLeadFirstName" id="pocLeadFirstName" placeholder="POC Lead First Name">
+        </div>
+        <div class="form-group">
+            <label for="pocLeadMiddleName">POC Lead Middle Name<code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="pocLeadMiddleName" id="pocLeadMiddleName" placeholder="POC Lead Middle Name">
+        </div>
+        <div class="form-group">
+            <label for="pocLeadLastName">POC Lead Last Name<code>*</code></label>
+            <input type="text" class="form-control rounded-0" formControlName="pocLeadLastName" id="pocLeadLastName" placeholder="POC Lead Last Name">
+        </div>        
+        <div class="form-group">
+            <div class="form-group">
+                <label for="status">Status <code>*</code></label>
+                <select class="custom-select rounded-0" formControlName="status" id="status">
+                <option value="0">Live</option>
+                <option value="1">Draft</option>
+                <option value="2">Deactivated</option>
+                <option value="3">Deleted</option>
+                </select>
+            </div>
+        </div>            
+    </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark rounded-0" (click)="submit()">Save</button>
+</div>

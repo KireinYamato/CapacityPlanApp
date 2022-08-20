@@ -1,0 +1,12 @@
+.table-container{
+    min-height: 295px;
+    position: relative;
+}
+
+#createCapacityPlanBtn{
+    margin-bottom: 10px;
+}
+
+.capacity-plan-table tr.capacity-plan-row:hover{
+    background-color: #ccc;
+}

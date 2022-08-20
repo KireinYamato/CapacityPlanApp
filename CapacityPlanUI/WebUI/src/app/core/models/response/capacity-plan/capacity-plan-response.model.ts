@@ -13,4 +13,10 @@ export class CapacityPlanResponse{
     inShrinkage: InShrinkageResponse;
     outShrinkage: OutShrinkageResponse;
     // forVolume: ForVolumeResponse;
+
+    constructor(){
+        this.capacityPlanDetails = new CapacityPlanDetailsResponse();
+        this.capacityPlanTarget = new CapacityPlanTargetResponse();
+        this.capacityPlanWorkload = new CapacityPlanWorkloadResponse();
+    }
 }

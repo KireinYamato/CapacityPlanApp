@@ -31,13 +31,19 @@
               "src/assets"
             ],
             "styles": [              
+              "node_modules/ngx-spinner/animations/ball-running-dots.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss",
               "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
-              "node_modules/admin-lte/dist/css/adminlte.min.css"
+              "node_modules/admin-lte/dist/css/adminlte.min.css",
+              "node_modules/bs-stepper/dist/css/bs-stepper.min.css",
+              "node_modules/admin-lte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
             ],
             "scripts": [
               "node_modules/admin-lte/plugins/jquery/jquery.min.js",
               "node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "node_modules/admin-lte/plugins/sweetalert2/sweetalert2.min.js",
+              "node_modules/bs-stepper/dist/js/bs-stepper.min.js",
               "node_modules/admin-lte/dist/js/adminlte.min.js"
             ]
           },

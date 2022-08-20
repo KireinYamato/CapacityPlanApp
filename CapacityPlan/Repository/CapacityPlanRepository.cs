@@ -80,7 +80,7 @@ namespace CapacityPlanApp.Repository
                 .Include(x => x.CapacityPlanWorkload)
                 .Include(x => x.InShrinkage)
                 .Include(x => x.OutShrinkage)
-                .OrderBy(on => on.Id),
+                .OrderByDescending(on => on.Id),
                 capacityPlanQueryParameters.PageNumber,
                 capacityPlanQueryParameters.PageSize);
         }
